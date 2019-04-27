@@ -18,9 +18,10 @@ public class JoueurContreJoueur {
 			jeu.jouerUnCoup(numero_joueur_1);
 			grille_pleine = jeu.getPlateau().verifierGrillePleine();
 			if (grille_pleine==true) {
+				System.out.println("La grille est pleine! Match nul.");
 				break;
 			}
-			victoire_joueur_1=jeu.gagner(jeu.getPlateau().getGrille(),numero_joueur_1);
+			victoire_joueur_1=jeu.gagner(jeu.getPlateau(),numero_joueur_1);
 			if (victoire_joueur_1) {
 				System.out.println("Victoire du joueur "+numero_joueur_1+"!");
 				break;
@@ -28,9 +29,10 @@ public class JoueurContreJoueur {
 			jeu.jouerUnCoup(numero_joueur_2);
 			grille_pleine = jeu.getPlateau().verifierGrillePleine();
 			if (grille_pleine==true) {
+				System.out.println("La grille est pleine! Match nul.");
 				break;
 			}
-			victoire_joueur_2=jeu.gagner(jeu.getPlateau().getGrille(),numero_joueur_2);
+			victoire_joueur_2=jeu.gagner(jeu.getPlateau(),numero_joueur_2);
 			if (victoire_joueur_2) {
 				System.out.println("Victoire du joueur "+numero_joueur_2+"!");
 				break;

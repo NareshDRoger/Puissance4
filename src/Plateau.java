@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 public class Plateau {
 	
 	private int[][] grille = new int[6][7];
@@ -79,5 +82,6 @@ public class Plateau {
 		}
 		return true;
 	}
+	
 	
 }

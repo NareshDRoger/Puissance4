@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Scanner;
 
 public class Jeu {
@@ -60,7 +61,8 @@ public class Jeu {
 		plateau.afficher();
 	}
 	
-	public boolean gagner(int[][] grille, int numero_joueur) {
+	public boolean gagner(Plateau plateau, int numero_joueur) {
+		int [][] grille = plateau.getGrille();
 		//Vérifier sur l'horizontale
 		for(int colonne=0;colonne<((grille[0].length)-3);colonne++) {
 			for (int ligne = 0;ligne<grille.length;ligne++) {
@@ -113,5 +115,15 @@ public class Jeu {
 			disques_list.add(plateau.getDernier_disque());
 			disques_joueurs.put(numero_joueur, disques_list);
 		}
+	}
+	
+	public List<Integer> getColonnesDisponibles(Plateau plateau) {
+		int [][] grille = plateau.getGrille();
+		List<Integer> colonnes_disponibles = new ArrayList<Integer>();
+		for (int numero_colonne=0; numero_colonne<grille[0].length; numero_colonne++) {
+			if (plateau.determinerLigne(numero_colonne)!=-1)
+				colonnes_disponibles.add(numero_colonne);
+		}
+		return colonnes_disponibles;
 	}
 }
