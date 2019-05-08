@@ -7,6 +7,7 @@ public class JoueurContreJoueur {
 	
 	public JoueurContreJoueur() {
 		this.jeu=new Jeu();
+		jeu.getPlateau().afficher();
 		jouer();
 	}
 

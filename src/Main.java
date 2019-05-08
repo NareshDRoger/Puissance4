@@ -17,5 +17,5 @@ public class Main {
 			JoueurContreIA JvsIA = new JoueurContreIA();
 		}
 		sc.close();
-	}       
+	}
 }

@@ -12,7 +12,7 @@ public class Jeu {
 		this.plateau = new Plateau ();
 		plateau.initialiser();
 		disques_joueurs = new HashMap<Integer,ArrayList<Disque>>();
-		plateau.afficher();
+		//plateau.afficher();
 	}
 	
 	
@@ -117,7 +117,7 @@ public class Jeu {
 		}
 	}
 	
-	public List<Integer> getColonnesDisponibles(Plateau plateau) {
+	public List<Integer> getColonnesDisponibles() {
 		int [][] grille = plateau.getGrille();
 		List<Integer> colonnes_disponibles = new ArrayList<Integer>();
 		for (int numero_colonne=0; numero_colonne<grille[0].length; numero_colonne++) {
